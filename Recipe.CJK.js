@@ -1874,37 +1874,7 @@ void function () {
     // Register the recipe to be ran
     window.CSSUsage.StyleWalker.recipesToRun.push(recipe);
 }();
-/*
-    RECIPE: File Input Usage
-    -------------------------------------------------------------
-    Author: Greg Whitworth
-*/
 
-void function() {
-    window.CSSUsage.StyleWalker.recipesToRun.push( function fileInputUsage(/*HTML DOM Element*/ element, results) {
-        if(element.nodeName == "INPUT") {
-            if (element.attributes.length > 0) {
-                for(var n = 0; n < element.attributes.length; n++) {
-                    if(element.attributes[n].name == "type") {
-                        if (element.attributes[n].value.toLowerCase() === "file") {
-                            results["file"] = results["file"] || { count: 0 };
-                            results["file"].count++;
-                        }
-                    }
-                }
-            }
-        }
-
-        return results;
-    });
-}();
-Make CJK-recipe.js available in a publicly accessible url
-Compile list of url
-Got to crawler site
-Select Browser to run as
-Specify JS file link
-Upload URL file
-Schedule
 //
 // This file is only here to create the TSV
 // necessary to collect the data from the crawler
